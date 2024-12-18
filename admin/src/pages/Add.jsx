@@ -14,7 +14,7 @@ const Add = ({token}) => {
   const [description, setDescription] =useState('')
   const [price, setPrice] =useState('')
   const [category, setCategory] =useState('Men')
-  const [subcategory, setsubCategory] =useState('Topwear')
+  const [subCategory, setSubCategory] =useState('Topwear')
   const [bestseller, setBestseller] = useState(false)
   const [sizes, setSizes] = useState([]);
 
@@ -32,7 +32,7 @@ const Add = ({token}) => {
       formData.append('description', description)
       formData.append('price', price)
       formData.append('category', category)
-      formData.append('subcategory', subcategory)
+      formData.append('subCategory', subCategory)
       formData.append('bestseller', bestseller)
       formData.append('sizes', JSON.stringify(sizes))
       
@@ -123,7 +123,7 @@ const Add = ({token}) => {
     
       <div>
         <p className='mb-2'>sub category:</p>
-        <select onChange={(e)=>setsubCategory(e.target.value)} className=' w-full px-3 py-2'>
+        <select onChange={(e)=>setSubCategory(e.target.value)} className=' w-full px-3 py-2'>
           <option value="Topwear">Topwear</option>
           <option value="Bottomwear">Bottomwear</option>
           <option value="Winterwear">Winterwear </option>
